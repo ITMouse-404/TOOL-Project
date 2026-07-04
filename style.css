@@ -1,0 +1,76 @@
+
+.container-search{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex; /*chia ra 2 cột*/
+    flex-direction: column;
+    /*2 dòng dưới không cần khi app dô projject tụi mình*/
+    justify-content: center;
+    align-items: center;
+}
+.search-form{
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 999px;
+    background-color: green;
+    padding: 0.75rem;
+    margin: 0.75rem;
+    transition: width 0.5s;
+}
+.search-input{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    /* padding-left: 1rem; */
+    font-size: small;
+    pointer-events: none
+}
+.search-btn{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.fa-magnifying-glass,.fa-magnifying-glass-minus{
+    position: absolute;
+    font-size: 1.25rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.fa-magnifying-glass-minus{
+    opacity: 0;
+}
+
+/* active */
+.active-search{
+    max-width: 100%;
+    width: 20rem;
+}
+.active-search .search-btn{
+    left: auto;
+    right: 0.75rem;
+    transform: translateY(-50%);
+}
+.active-search .search-input{
+    /* padding-right: 3rem; */
+    pointer-events: initial;
+}
+.active-search .fa-magnifying-glass-minus{
+    opacity: 1;
+}
+.active-search .fa-magnifying-glass{
+    opacity: 0;
+}
